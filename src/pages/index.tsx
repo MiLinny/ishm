@@ -6,6 +6,12 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const isProd = process.env.NODE_ENV === "production";
+
+  console.log(process.env.NODE_ENV);
+  console.log(isProd);
+
+
   return (
     <>
       <Head>
@@ -15,6 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
